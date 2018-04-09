@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: template01/testnetlifycms
   branch: master # Branch to update
 
