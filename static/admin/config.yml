@@ -1,19 +1,7 @@
 backend:
-  name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  name: github
+  repo: template01/testnetlifycms
+  branch: master # Branch to update
 
-media_folder: "static/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "uploads" # The src attribute for uploaded media will begin with /images/uploads
-
-collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Ping pong post"
-    folder: "content/blog/posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-
+publish_mode: editorial_workflow
+media_folder: "static/images/"
