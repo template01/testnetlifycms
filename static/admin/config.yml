@@ -3,7 +3,6 @@ backend:
   repo: template01/testnetlifycms
   branch: master # Branch to update
 
-publish_mode: editorial_workflow
 media_folder: "static/images/"
 
 collections: # A list of collections the CMS should be able to edit
