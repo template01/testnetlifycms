@@ -5,3 +5,12 @@ backend:
 
 publish_mode: editorial_workflow
 media_folder: "static/images/"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Poster" # Used in the UI, ie.: "New Ping pong post"
+    folder: "content/blog/posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
